@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <BooksSearch />
+    <TopBar />
+    <div class="contents">
+      <BooksSearch />
+    </div>
   </div>
 </template>
 
 <script>
 import BooksSearch from "./components/Search.vue";
+import TopBar from "./components/Top.vue";
 
 export default {
   name: "App",
+  data() {
+    return {};
+  },
   components: {
     BooksSearch,
+    TopBar,
   },
 };
 </script>
@@ -22,6 +30,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.contents {
+  width: 100%;
+  padding-top: 6em;
 }
 </style>
